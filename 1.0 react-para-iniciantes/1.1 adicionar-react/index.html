@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React para iniciantes</title>
+  </head>
+
+  <!-- Carrega o React, React Dom e Babel -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  <!-- Don't use this in production: -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <body>
+    <div id="root">
+      <script type="text/babel">
+        function Button() {
+          const [total, setTotal] = React.useState(0);
+          const sum = () => setTotal(total + 1);
+          return <button onClick={() => sum()}>{total}</button>;
+        }
+
+        const MainNav = () => {
+          return (
+            <nav>
+              <li>
+                <a href="#">Link 1</a>
+              </li>
+              <li>
+                <a href="#">Link 1</a>
+              </li>
+            </nav>
+          );
+        };
+
+        const Produtos = () => {
+          const roupas = ["Camiseta", "Calça"];
+
+          function handleClick(event) {
+            console.log(`Usuário complou: ${event.target.textContent}`);
+          }
+
+          return (
+            <div>
+              {roupas.map((item, index) => {
+                return (
+                  <button onClick={handleClick} key={index}>
+                    {item}
+                  </button>
+                );
+              })}
+            </div>
+          );
+        };
+
+        const Comprar = () => {
+          const [contar, setContar] = React.useState(0);
+          console.log(contar);
+          function handleClick() {
+            setContar(contar + 1);
+          }
+          return (
+            <div>
+              <button onClick={handleClick}>Comprar: {contar}</button>
+              <p>Total:{contar}</p>
+              <p>Preço: {contar * 250}</p>
+            </div>
+          );
+        };
+
+        function App() {
+          return (
+            <>
+              <h1>Aplicativo React</h1>
+              <MainNav />
+              <Produtos />
+              <Comprar />
+            </>
+          );
+        }
+
+        const container = document.getElementById("root");
+        const root = ReactDOM.createRoot(container);
+
+        root.render(<App />);
+      </script>
+    </div>
+  </body>
+</html>
