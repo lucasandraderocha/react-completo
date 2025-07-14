@@ -1,5 +1,6 @@
 import React from "react";
 import Exercicio from "./Exercicio";
+import Tutor from "./Tutor";
 function App() {
   // const [modal, setModal] = useState(false);
   return (
@@ -8,7 +9,8 @@ function App() {
         <Modal modal={modal} setModal={setModal} />
         <ButtonModal setModal={setModal} />
       </div> */}
-      <Exercicio />
+      {/* <Exercicio /> */}
+      <Tutor />
     </>
   );
 }
