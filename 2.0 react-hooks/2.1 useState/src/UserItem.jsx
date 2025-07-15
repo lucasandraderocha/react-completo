@@ -1,17 +1,15 @@
 import React from "react";
+import UserDetails from "./UserDetails";
+import UserPosts from "./UserPosts";
 
-const UserItem = ({ data }) => {
+const UserItem = ({ user }) => {
   return (
     <>
-      <ul>
-        {data.map(({ name }) => {
-          <li>
-            <div>
-              <p>{name}</p>
-            </div>
-          </li>;
-        })}
-      </ul>
+      <li>
+        <p>{user.name}</p>
+        <UserDetails details={user} />
+        <UserPosts userData={user} />
+      </li>
     </>
   );
 };
