@@ -1,18 +1,28 @@
 import React from "react";
-import UserItem from "./UserItem";
+import UserList from "./UserList";
 
 const Tutor = () => {
-  const [user, setUser] = React.useState(null);
-  const handleClick = async () => {
-    let res = await fetch("https://jsonplaceholder.typicode.com/users");
-    let users = await res.json();
-    setUser(users);
+  const [data, setData] = React.useState(null);
+
+  const handleUserLoad = async () => {
+    const res = await fetch("https://jsonplaceholder.typicode.com/users");
+    const json = await res.json();
+    setData(json);
+    console.log(json);
   };
-  console.log(user);
   return (
     <>
-      <UserItem data={user} />
-      <button onClick={handleClick}>User</button>
+      <fieldset>
+        <header>
+          <h1 style={{ color: "#283618" }}>User list</h1>
+        </header>
+        <main>
+          <UserList userData={data} />
+        </main>
+        <section>
+          <button onClick={handleUserLoad}>Load</button>
+        </section>
+      </fieldset>
     </>
   );
 };
