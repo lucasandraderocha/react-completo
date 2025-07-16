@@ -1,20 +1,23 @@
-import React from "react";
-import RefAsCounter from "./RefAsCounter";
-import RefAsInput from "./RefAsInput";
-import RefAsDOMInteraction from "./RefAsDOMInteraction";
+import { useState } from "react";
+
+import Lesson from "./lesson/Lesson";
+import Test from "./test/Test";
 
 function App() {
+  const [lesson, setLesson] = useState(true);
+  const handleShowClick = () => {
+    setLesson(!lesson);
+  };
   return (
     <>
       <div>
-        <RefAsDOMInteraction />
+        <button onClick={handleShowClick}>
+          {lesson ? "Mostrar testes" : "Mostrar Aula"}
+        </button>
       </div>
-      {/* <div>
-        <RefAsInput />
-      </div>
-      <div>
-        <RefAsCounter />
-      </div> */}
+      <br />
+      {!lesson && <Test />}
+      {lesson && <Lesson />}
     </>
   );
 }

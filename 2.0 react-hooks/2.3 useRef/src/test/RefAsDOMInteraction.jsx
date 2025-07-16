@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import { useState, useRef } from "react";
 import FakeModal from "./FakeModal";
 const RefAsDOMInteraction = () => {
   const [showModal, setShowModal] = useState(false);
