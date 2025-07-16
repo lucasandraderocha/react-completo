@@ -1,45 +1,27 @@
-import React from "react";
-import Exercicio from "./Exercicio";
-import Correcao from "./Correcao";
-const react = React;
-
-const Product = () => {
-  react.useEffect(() => {
-    const handleScroll = e => {
-      console.log(e);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-  return (
-    <>
-      <div style={{ height: "110vh" }}>
-        <h1>My Product</h1>
-      </div>
-    </>
-  );
-};
+import { useEffect, useState } from "react";
+import LessonEffect from "./LessonEffect";
+import ExerciseEffect from "./ExerciseEffect";
 function App() {
-  const containerStyle = {
-    backgroundColor: "black",
-    color: "white",
-    padding: "1rem",
-    borderRadius: ".5rem",
+  const [view, setView] = useState(null);
+  const handleExerciseRef = () => {
+    setView(!view);
   };
-  // const [active, setActive] = react.useState(false);
+  useEffect(() => {
+    setView(true);
+  }, []);
+
   return (
     <>
-      {/* {active && <Product />}
-      <button onClick={() => setActive(!active)}>
-        {!active ? "Ativar" : "Desativar"}
-      </button> */}
-      {/* <div style={containerStyle}>
-        <Exercicio />
-      </div> */}
-      <div style={containerStyle}>
-        <Correcao />
+      <div>
+        {view && <ExerciseEffect />}
+        <br />
+        <button onClick={handleExerciseRef}>
+          {view ? "Mostrar Exercicio" : "Fechar"}
+        </button>
+      </div>
+      <br />
+      <div>
+        <LessonEffect />
       </div>
     </>
   );
