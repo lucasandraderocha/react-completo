@@ -1,21 +1,30 @@
 import React from "react";
 
 const RefAsCounter = () => {
+  const [amount, setAmount] = React.useState(null);
   const counterRef = React.useRef(0);
 
-  const handleIncreaseRef = () => {
-    counterRef.current = counterRef.current + 1;
+  const handleCountClick = () => {
+    counterRef.current++;
+    console.log(`counterRef.current: ${counterRef.current}`);
+  };
+
+  const handleAlertClick = () => {
+    alert(`Foram clicadas ${counterRef.current} vezes`);
   };
 
   const handleShowClick = () => {
-    alert(`Foram clicados ${counterRef.current} vezes`);
+    setAmount(counterRef.current);
   };
-
   return (
     <>
-      <div>useRef como uma alternativa ao useState</div>
-      <button onClick={handleIncreaseRef}>clicar</button>
-      <button onClick={handleShowClick}>Mostrar Cliques</button>
+      <div>
+        <p>useRef como uma alternativa ao useState</p>
+        <button onClick={handleCountClick}>Clicar</button>
+        <button onClick={handleAlertClick}>Alert de Cliques</button>
+        <button onClick={handleShowClick}>Mostrar Cliques [UI]</button>
+        {amount && <p>{amount} Cliques</p>}
+      </div>
     </>
   );
 };

@@ -1,10 +1,20 @@
 import React from "react";
 import RefAsCounter from "./RefAsCounter";
+import RefAsInput from "./RefAsInput";
+import RefAsDOMInteraction from "./RefAsDOMInteraction";
 
 function App() {
   return (
     <>
-      <RefAsCounter />
+      <div>
+        <RefAsDOMInteraction />
+      </div>
+      {/* <div>
+        <RefAsInput />
+      </div>
+      <div>
+        <RefAsCounter />
+      </div> */}
     </>
   );
 }
