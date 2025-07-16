@@ -1,21 +1,20 @@
 import React from "react";
+import RefAsCounter from "./RefAsCounter";
+import RefAsInput from "./RefAsInput";
+import RefAsDOMInteraction from "./RefAsDOMInteraction";
 
 function App() {
-  const [count, setCount] = React.useState(0);
-  const countRef = React.useRef(0);
-
-  const handleIncrement = () => {
-    setCount(count + 1);
-    countRef.current++;
-
-    console.log("State", count);
-    console.log("Ref", countRef.current);
-  };
-
   return (
     <>
-      <p>Count: {count}</p>
-      <button onClick={handleIncrement}>Increment</button>
+      <div>
+        <RefAsDOMInteraction />
+      </div>
+      {/* <div>
+        <RefAsInput />
+      </div>
+      <div>
+        <RefAsCounter />
+      </div> */}
     </>
   );
 }
