@@ -1,9 +1,9 @@
-import FilterList from "./FilterList";
+import UseMemoExercises from "./UseMemoExercises";
 const Test = () => {
   return (
     <>
       <h1>Test</h1>
-      <FilterList />
+      <UseMemoExercises />
     </>
   );
 };
