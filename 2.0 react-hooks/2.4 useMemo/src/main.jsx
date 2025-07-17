@@ -3,7 +3,7 @@ import React from "react";
 import App from "./App.jsx";
 const root = document.getElementById("root");
 createRoot(root).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  // <React.StrictMode>
+  <App />
+  // </React.StrictMode>
 );
