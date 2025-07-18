@@ -1,0 +1,19 @@
+:root {
+  --font-main: "IBM Plex Mono", monospace;
+  --font-body: "Inter", sans-serif;
+  --font-xlg: 2rem;
+  --font-lg: 1.5rem;
+  --font-md: 1.875rem;
+  --font-sm: 0.875rem;
+  --color-primary: #fca311;
+  --color-primary-hover: #ffc300;
+  --color-neutral-halo: #ffffff;
+  --color-neutral-soft: #e5e5e5;
+  --color-neutral-tint: #9fa4ad;
+  --color-neutral-dim: #5a6275;
+  --color-neutral-dark: #14213d;
+  --color-neutral-deep: #000000;
+  --rds-lg: 2.125rem;
+  --rds-md: 1.5rem;
+  --rds-sm: 0.5rem;
+}
