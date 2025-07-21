@@ -1,10 +1,8 @@
-import React from "react";
-
 const ContainerTestContext = ({ children }) => {
   return (
-    <>
-      <div className="">{children}</div>
-    </>
+    <div className="py-8 px-8 w-full flex flex-column gap-8 brd-sm rds-sm">
+      {children}
+    </div>
   );
 };
 

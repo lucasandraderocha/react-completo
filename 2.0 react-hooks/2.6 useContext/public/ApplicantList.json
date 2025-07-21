@@ -1,0 +1,705 @@
+[
+  {
+    "id": 1,
+    "user": {
+      "username": "_roxxane",
+      "full_name": "Roxxane Silva",
+      "email": "roxxane@example.com",
+      "avatar_url": "https://avatar.iran.liara.run/public/girl",
+      "role": "admin",
+      "joined_at": "2021-04-15T11:52:29.000Z"
+    },
+    "account_status": "active",
+    "subscription": {
+      "plan": "Enterprise",
+      "renewal_date": "2025-12-01",
+      "usage": {
+        "storage_gb": 42,
+        "seats_used": 5,
+        "projects": 12
+      }
+    },
+    "workspaces": [
+      {
+        "id": "ws_001",
+        "name": "Team-Up - Your Open Source Agency",
+        "created_at": "2022-06-10T09:00:00.000Z",
+        "status": "active",
+        "plan": "Enterprise",
+        "members": [
+          {
+            "id": 101,
+            "name": "Roxxane Silva",
+            "role": "owner"
+          },
+          {
+            "id": 102,
+            "name": "Theo Martins",
+            "role": "developer"
+          },
+          {
+            "id": 103,
+            "name": "Julia Dev",
+            "role": "designer"
+          }
+        ],
+        "projects": [
+          {
+            "id": "proj_01",
+            "name": "Website Redesign",
+            "description": "Revamp the corporate website with new branding.",
+            "start_date": "2024-10-01",
+            "due_date": "2025-01-15",
+            "status": "in progress",
+            "tasks": [
+              {
+                "id": "task_001",
+                "title": "Design Wireframes",
+                "assigned_to": "Julia Dev",
+                "status": "completed",
+                "due_date": "2024-11-01",
+                "attachments": [
+                  "wireframe-v1.png",
+                  "feedback.pdf"
+                ],
+                "comments": [
+                  {
+                    "by": "Roxxane Silva",
+                    "message": "Looks good!",
+                    "date": "2024-10-20"
+                  }
+                ]
+              },
+              {
+                "id": "task_002",
+                "title": "Frontend Development",
+                "assigned_to": "Theo Martins",
+                "status": "in progress",
+                "due_date": "2025-01-01",
+                "attachments": [],
+                "comments": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "user": {
+      "username": "alex_tech",
+      "full_name": "Alex Johnson",
+      "email": "alex@example.com",
+      "avatar_url": "https://avatar.iran.liara.run/public/boy",
+      "role": "developer",
+      "joined_at": "2022-03-10T08:30:00.000Z"
+    },
+    "account_status": "active",
+    "subscription": {
+      "plan": "Pro",
+      "renewal_date": "2025-11-15",
+      "usage": {
+        "storage_gb": 28,
+        "seats_used": 3,
+        "projects": 8
+      }
+    },
+    "workspaces": [
+      {
+        "id": "ws_002",
+        "name": "Code Innovators",
+        "created_at": "2022-07-22T14:20:00.000Z",
+        "status": "active",
+        "plan": "Pro",
+        "members": [
+          {
+            "id": 201,
+            "name": "Alex Johnson",
+            "role": "owner"
+          },
+          {
+            "id": 202,
+            "name": "Maria Garcia",
+            "role": "developer"
+          },
+          {
+            "id": 203,
+            "name": "Tom Chen",
+            "role": "designer"
+          }
+        ],
+        "projects": [
+          {
+            "id": "proj_02",
+            "name": "API Integration",
+            "description": "Integrate third-party services via RESTful API",
+            "start_date": "2024-09-01",
+            "due_date": "2024-12-10",
+            "status": "in progress",
+            "tasks": [
+              {
+                "id": "task_021",
+                "title": "Authentication Setup",
+                "assigned_to": "Alex Johnson",
+                "status": "completed",
+                "due_date": "2024-10-15",
+                "attachments": [
+                  "auth-specs.docx"
+                ],
+                "comments": [
+                  {
+                    "by": "Maria Garcia",
+                    "message": "SSL issues resolved",
+                    "date": "2024-10-10"
+                  }
+                ]
+              },
+              {
+                "id": "task_022",
+                "title": "Endpoint Development",
+                "assigned_to": "Maria Garcia",
+                "status": "in progress",
+                "due_date": "2024-11-30",
+                "attachments": [],
+                "comments": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "user": {
+      "username": "data_wizard",
+      "full_name": "Sarah Kim",
+      "email": "sarah@example.com",
+      "avatar_url": "https://avatar.iran.liara.run/public/boy",
+      "role": "analyst",
+      "joined_at": "2023-01-15T10:15:00.000Z"
+    },
+    "account_status": "pending",
+    "subscription": {
+      "plan": "Basic",
+      "renewal_date": "2025-09-30",
+      "usage": {
+        "storage_gb": 15,
+        "seats_used": 1,
+        "projects": 3
+      }
+    },
+    "workspaces": [
+      {
+        "id": "ws_003",
+        "name": "Data Insights Lab",
+        "created_at": "2023-02-20T11:40:00.000Z",
+        "status": "active",
+        "plan": "Basic",
+        "members": [
+          {
+            "id": 301,
+            "name": "Sarah Kim",
+            "role": "owner"
+          }
+        ],
+        "projects": [
+          {
+            "id": "proj_03",
+            "name": "Customer Analytics",
+            "description": "Analyze user behavior patterns",
+            "start_date": "2024-08-15",
+            "due_date": "2024-11-20",
+            "status": "planned",
+            "tasks": [
+              {
+                "id": "task_031",
+                "title": "Data Collection",
+                "assigned_to": "Sarah Kim",
+                "status": "planned",
+                "due_date": "2024-09-10",
+                "attachments": [],
+                "comments": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "user": {
+      "username": "dev_ops_master",
+      "full_name": "James Wilson",
+      "email": "james@example.com",
+      "avatar_url": "https://avatar.iran.liara.run/public/boy",
+      "role": "admin",
+      "joined_at": "2020-11-30T13:25:00.000Z"
+    },
+    "account_status": "suspended",
+    "subscription": {
+      "plan": "Enterprise",
+      "renewal_date": "2025-10-05",
+      "usage": {
+        "storage_gb": 65,
+        "seats_used": 8,
+        "projects": 15
+      }
+    },
+    "workspaces": [
+      {
+        "id": "ws_004",
+        "name": "Cloud Infrastructure",
+        "created_at": "2021-01-15T09:10:00.000Z",
+        "status": "archived",
+        "plan": "Enterprise",
+        "members": [
+          {
+            "id": 401,
+            "name": "James Wilson",
+            "role": "owner"
+          },
+          {
+            "id": 402,
+            "name": "Emma Brown",
+            "role": "devops"
+          },
+          {
+            "id": 403,
+            "name": "Liam Taylor",
+            "role": "developer"
+          }
+        ],
+        "projects": [
+          {
+            "id": "proj_04",
+            "name": "Server Migration",
+            "description": "Migrate to cloud-based infrastructure",
+            "start_date": "2023-05-01",
+            "due_date": "2023-10-15",
+            "status": "completed",
+            "tasks": [
+              {
+                "id": "task_041",
+                "title": "Backup Configuration",
+                "assigned_to": "Emma Brown",
+                "status": "completed",
+                "due_date": "2023-06-20",
+                "attachments": [
+                  "backup-schedule.xlsx"
+                ],
+                "comments": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "user": {
+      "username": "creative_eyes",
+      "full_name": "Olivia Davis",
+      "email": "olivia@example.com",
+      "avatar_url": "https://avatar.iran.liara.run/public/girl",
+      "role": "designer",
+      "joined_at": "2023-05-20T16:45:00.000Z"
+    },
+    "account_status": "active",
+    "subscription": {
+      "plan": "Pro",
+      "renewal_date": "2025-08-14",
+      "usage": {
+        "storage_gb": 22,
+        "seats_used": 2,
+        "projects": 6
+      }
+    },
+    "workspaces": [
+      {
+        "id": "ws_005",
+        "name": "Creative Studio",
+        "created_at": "2023-06-01T10:00:00.000Z",
+        "status": "active",
+        "plan": "Pro",
+        "members": [
+          {
+            "id": 501,
+            "name": "Olivia Davis",
+            "role": "owner"
+          },
+          {
+            "id": 502,
+            "name": "Noah Martinez",
+            "role": "designer"
+          }
+        ],
+        "projects": [
+          {
+            "id": "proj_05",
+            "name": "Brand Identity",
+            "description": "Develop visual identity for startup",
+            "start_date": "2024-07-01",
+            "due_date": "2024-10-31",
+            "status": "in progress",
+            "tasks": [
+              {
+                "id": "task_051",
+                "title": "Logo Design",
+                "assigned_to": "Olivia Davis",
+                "status": "completed",
+                "due_date": "2024-08-15",
+                "attachments": [
+                  "logo-concepts.ai"
+                ],
+                "comments": [
+                  {
+                    "by": "Noah Martinez",
+                    "message": "Client approved option 3",
+                    "date": "2024-08-10"
+                  }
+                ]
+              },
+              {
+                "id": "task_052",
+                "title": "Style Guide",
+                "assigned_to": "Noah Martinez",
+                "status": "in progress",
+                "due_date": "2024-10-15",
+                "attachments": [],
+                "comments": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "user": {
+      "username": "sys_arch",
+      "full_name": "Robert Lee",
+      "email": "robert@example.com",
+      "avatar_url": "https://avatar.iran.liara.run/public/boy",
+      "role": "architect",
+      "joined_at": "2021-08-12T11:20:00.000Z"
+    },
+    "account_status": "active",
+    "subscription": {
+      "plan": "Enterprise",
+      "renewal_date": "2026-01-31",
+      "usage": {
+        "storage_gb": 78,
+        "seats_used": 6,
+        "projects": 18
+      }
+    },
+    "workspaces": [
+      {
+        "id": "ws_006",
+        "name": "System Architecture",
+        "created_at": "2021-09-01T08:45:00.000Z",
+        "status": "active",
+        "plan": "Enterprise",
+        "members": [
+          {
+            "id": 601,
+            "name": "Robert Lee",
+            "role": "owner"
+          },
+          {
+            "id": 602,
+            "name": "Sophia Clark",
+            "role": "developer"
+          }
+        ],
+        "projects": [
+          {
+            "id": "proj_06",
+            "name": "Microservices Migration",
+            "description": "Transition from monolith to microservices",
+            "start_date": "2024-06-15",
+            "due_date": "2025-02-28",
+            "status": "in progress",
+            "tasks": [
+              {
+                "id": "task_061",
+                "title": "Service Boundaries Definition",
+                "assigned_to": "Robert Lee",
+                "status": "completed",
+                "due_date": "2024-07-30",
+                "attachments": [
+                  "architecture-diagram.pdf"
+                ],
+                "comments": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "user": {
+      "username": "qa_guru",
+      "full_name": "Ethan Moore",
+      "email": "ethan@example.com",
+      "avatar_url": "https://avatar.iran.liara.run/public/boy",
+      "role": "tester",
+      "joined_at": "2022-09-05T14:30:00.000Z"
+    },
+    "account_status": "active",
+    "subscription": {
+      "plan": "Pro",
+      "renewal_date": "2025-10-22",
+      "usage": {
+        "storage_gb": 31,
+        "seats_used": 4,
+        "projects": 9
+      }
+    },
+    "workspaces": [
+      {
+        "id": "ws_007",
+        "name": "Quality Assurance",
+        "created_at": "2022-10-10T13:15:00.000Z",
+        "status": "active",
+        "plan": "Pro",
+        "members": [
+          {
+            "id": 701,
+            "name": "Ethan Moore",
+            "role": "owner"
+          },
+          {
+            "id": 702,
+            "name": "Ava Rodriguez",
+            "role": "tester"
+          }
+        ],
+        "projects": [
+          {
+            "id": "proj_07",
+            "name": "Automation Framework",
+            "description": "Build test automation infrastructure",
+            "start_date": "2024-07-20",
+            "due_date": "2024-11-30",
+            "status": "in progress",
+            "tasks": [
+              {
+                "id": "task_071",
+                "title": "Tool Selection",
+                "assigned_to": "Ethan Moore",
+                "status": "completed",
+                "due_date": "2024-08-05",
+                "attachments": [
+                  "comparison.xlsx"
+                ],
+                "comments": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "user": {
+      "username": "mobile_d",
+      "full_name": "Mia Anderson",
+      "email": "mia@example.com",
+      "avatar_url": "https://avatar.iran.liara.run/public/girl",
+      "role": "developer",
+      "joined_at": "2023-03-18T09:40:00.000Z"
+    },
+    "account_status": "pending",
+    "subscription": {
+      "plan": "Basic",
+      "renewal_date": "2025-12-15",
+      "usage": {
+        "storage_gb": 17,
+        "seats_used": 1,
+        "projects": 4
+      }
+    },
+    "workspaces": [
+      {
+        "id": "ws_008",
+        "name": "Mobile Development",
+        "created_at": "2023-04-01T10:20:00.000Z",
+        "status": "active",
+        "plan": "Basic",
+        "members": [
+          {
+            "id": 801,
+            "name": "Mia Anderson",
+            "role": "owner"
+          }
+        ],
+        "projects": [
+          {
+            "id": "proj_08",
+            "name": "Fitness App",
+            "description": "Cross-platform health tracking application",
+            "start_date": "2024-09-05",
+            "due_date": "2025-01-20",
+            "status": "planned",
+            "tasks": [
+              {
+                "id": "task_081",
+                "title": "UI Prototyping",
+                "assigned_to": "Mia Anderson",
+                "status": "planned",
+                "due_date": "2024-10-01",
+                "attachments": [],
+                "comments": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "user": {
+      "username": "security_pro",
+      "full_name": "David Thompson",
+      "email": "david@example.com",
+      "avatar_url": "https://avatar.iran.liara.run/public/boy",
+      "role": "security",
+      "joined_at": "2021-12-14T15:10:00.000Z"
+    },
+    "account_status": "active",
+    "subscription": {
+      "plan": "Enterprise",
+      "renewal_date": "2026-03-31",
+      "usage": {
+        "storage_gb": 54,
+        "seats_used": 7,
+        "projects": 14
+      }
+    },
+    "workspaces": [
+      {
+        "id": "ws_009",
+        "name": "Cyber Security",
+        "created_at": "2022-01-05T11:30:00.000Z",
+        "status": "active",
+        "plan": "Enterprise",
+        "members": [
+          {
+            "id": 901,
+            "name": "David Thompson",
+            "role": "owner"
+          },
+          {
+            "id": 902,
+            "name": "Chloe White",
+            "role": "analyst"
+          }
+        ],
+        "projects": [
+          {
+            "id": "proj_09",
+            "name": "Vulnerability Assessment",
+            "description": "Full security audit of production systems",
+            "start_date": "2024-08-10",
+            "due_date": "2024-12-15",
+            "status": "in progress",
+            "tasks": [
+              {
+                "id": "task_091",
+                "title": "Penetration Testing",
+                "assigned_to": "David Thompson",
+                "status": "in progress",
+                "due_date": "2024-10-31",
+                "attachments": [
+                  "test-plan.docx"
+                ],
+                "comments": [
+                  {
+                    "by": "Chloe White",
+                    "message": "Found critical vulnerability",
+                    "date": "2024-10-15"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "user": {
+      "username": "ux_specialist",
+      "full_name": "Sophie Harris",
+      "email": "sophie@example.com",
+      "avatar_url": "https://avatar.iran.liara.run/public/girl",
+      "role": "designer",
+      "joined_at": "2022-05-22T12:35:00.000Z"
+    },
+    "account_status": "active",
+    "subscription": {
+      "plan": "Pro",
+      "renewal_date": "2025-11-30",
+      "usage": {
+        "storage_gb": 37,
+        "seats_used": 3,
+        "projects": 7
+      }
+    },
+    "workspaces": [
+      {
+        "id": "ws_010",
+        "name": "UX Research Lab",
+        "created_at": "2022-06-15T14:00:00.000Z",
+        "status": "active",
+        "plan": "Pro",
+        "members": [
+          {
+            "id": 1001,
+            "name": "Sophie Harris",
+            "role": "owner"
+          },
+          {
+            "id": 1002,
+            "name": "Jacob Martin",
+            "role": "researcher"
+          }
+        ],
+        "projects": [
+          {
+            "id": "proj_10",
+            "name": "User Experience Study",
+            "description": "Improve product usability through user testing",
+            "start_date": "2024-07-15",
+            "due_date": "2024-10-31",
+            "status": "completed",
+            "tasks": [
+              {
+                "id": "task_101",
+                "title": "Participant Recruitment",
+                "assigned_to": "Jacob Martin",
+                "status": "completed",
+                "due_date": "2024-08-01",
+                "attachments": [
+                  "participant-list.csv"
+                ],
+                "comments": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
