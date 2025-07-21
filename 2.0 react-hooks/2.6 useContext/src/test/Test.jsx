@@ -1,12 +1,12 @@
 import ContainerTestContext from "./ContainerTestContext";
-import GlobalTestStorage from "./GlobalTestStorage";
 import UserCardTestContext from "./UserCard/UserCardTestContext";
-
+import GlobalTestStorage from "./GlobalTestStorage";
+import LoadingUserTestContext from "./LoadingUserTestContext";
 const Test = () => {
   return (
     <GlobalTestStorage>
       <ContainerTestContext>
-        <button>Carregar Usuários</button>
+        <LoadingUserTestContext />
         <UserCardTestContext />
       </ContainerTestContext>
     </GlobalTestStorage>

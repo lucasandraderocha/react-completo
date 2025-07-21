@@ -1,11 +1,12 @@
 import { useState } from "react";
 
 import GlobalTestContext from "./GlobalTestContext";
+
 const GlobalTestStorage = ({ children }) => {
   const [applicantList, setApplicantList] = useState([]);
 
   const handleLoadingApplicant = async () => {
-    await fetch("./ApplicantList.json")
+    await fetch("/ApplicantList.json")
       .then(res => res.json())
       .then(json => setApplicantList(json));
   };

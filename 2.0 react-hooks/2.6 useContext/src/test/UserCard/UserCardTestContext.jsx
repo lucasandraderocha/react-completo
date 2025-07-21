@@ -6,8 +6,7 @@ import WorkspaceUserCardTestContext from "./WorkspaceUserCardTestContext";
 import GlobalTestContext from "../GlobalTestContext";
 
 const UserCardTestContext = () => {
-  const { handleLoadingApplicant, applicantList } =
-    useContext(GlobalTestContext);
+  const { applicantList } = useContext(GlobalTestContext);
 
   return (
     <>
@@ -35,14 +34,6 @@ const UserCardTestContext = () => {
               </div>
             </>
           ))}
-      </section>
-      <section>
-        <button
-          onClick={handleLoadingApplicant}
-          className="color-neutral-dim py-8 px-16 brd-md rds-sm pointer"
-        >
-          Carregar usuários
-        </button>
       </section>
     </>
   );

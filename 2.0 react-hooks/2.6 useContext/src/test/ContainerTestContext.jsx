@@ -1,8 +1,8 @@
 const ContainerTestContext = ({ children }) => {
   return (
-    <>
-      <div>{children}</div>
-    </>
+    <div className="py-8 px-8 w-full flex flex-column gap-8 brd-sm rds-sm">
+      {children}
+    </div>
   );
 };
 

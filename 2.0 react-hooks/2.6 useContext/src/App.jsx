@@ -16,7 +16,7 @@ const App = () => {
         <h1>useContext</h1>
         <div>
           <button
-            className="px-12 py-8 color-neutral-deep rds-sm typo-main"
+            className="px-12 py-8 color-neutral-deep rds-sm typo-main pointer"
             onClick={handleShowClick}
           >
             {lesson ? "Mostrar testes" : "Mostrar Aula"}
