@@ -11,21 +11,22 @@ const App = () => {
     setLesson(!lesson);
   };
   return (
-    <GlobalStorage>
-      <>
-        <fieldset>
-          <h1>useContext</h1>
-          <div>
-            <button onClick={handleShowClick}>
-              {lesson ? "Mostrar testes" : "Mostrar Aula"}
-            </button>
-          </div>
-          <br />
-          {!lesson && <Test />}
-          {lesson && <Lesson />}
-        </fieldset>
-      </>
-    </GlobalStorage>
+    <>
+      <fieldset className="typo-main py-24 px-24">
+        <h1>useContext</h1>
+        <div>
+          <button
+            className="px-12 py-8 color-neutral-deep rds-sm typo-main"
+            onClick={handleShowClick}
+          >
+            {lesson ? "Mostrar testes" : "Mostrar Aula"}
+          </button>
+        </div>
+        <br />
+        {!lesson && <Test />}
+        {lesson && <Lesson />}
+      </fieldset>
+    </>
   );
 };
 

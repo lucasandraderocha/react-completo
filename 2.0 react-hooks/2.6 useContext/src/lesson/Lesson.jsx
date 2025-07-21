@@ -1,13 +1,16 @@
+import { GlobalStorage } from "../utils/GlobalStorage";
 import ExerciseLesson from "./ExerciseLesson";
 
 const Lesson = () => {
   return (
-    <>
-      <section>
-        <h1>Lesson</h1>
-      </section>
-      <ExerciseLesson />
-    </>
+    <GlobalStorage>
+      <>
+        <section>
+          <h1>Lesson</h1>
+        </section>
+        <ExerciseLesson />
+      </>
+    </GlobalStorage>
   );
 };
 

@@ -1,24 +1,19 @@
 @import url(https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;800;900&display=swap);
 @import "./root.css";
+
+/*Reset CSS*/
 *,
 *::after,
 *::before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  border: none;
+  list-style-type: none;
 }
 
-.p-sm {
-  padding: 0.5rem;
-}
-.p-md {
-  padding: 1rem;
-}
-.p-lg {
-  padding: 1.5rem;
-}
-
+/*Typography size*/
 .typo-xlg {
   font-size: var(--font-xlg);
 }
@@ -32,84 +27,222 @@
   font-size: var(--font-sm);
 }
 
-h1,
-h2,
-h3 {
-  font-family: var(--font-title);
+/*Typography family*/
+.typo-main {
+  font-family: var(--font-main);
+}
+.typo-body {
+  font-family: var(--font-body);
 }
 
-h1,
-h2,
-h3,
-p,
-ul {
-  margin: 1rem 0;
+/*Main Colors*/
+.color-primary {
+  background: var(--color-primary);
+}
+.color-primary:hover {
+  background: var(--color-primary-hover);
 }
 
-ul {
-  list-style: square;
+/*Other Colors*/
+.color-neutral-halo {
+  background: var(--color-neutral-halo);
+  color: var(--color-neutral-deep);
+}
+.color-neutral-soft {
+  background: var(--color-neutral-soft);
+  color: var(--color-neutral-deep);
+}
+.color-neutral-tint {
+  background: var(--color-neutral-tint);
+  color: var(--color-neutral-halo);
+}
+.color-neutral-dim {
+  background: var(--color-neutral-dim);
+  color: var(--color-neutral-halo);
+}
+.color-neutral-dark {
+  background: var(--color-neutral-dark);
+  color: var(--color-neutral-halo);
+}
+.color-neutral-deep {
+  background: var(--color-neutral-deep);
+  color: var(--color-neutral-halo);
 }
 
-li {
-  margin-bottom: 0.5rem;
+/*Border Radius*/
+.rds-lg {
+  border-radius: var(--rds-lg);
+}
+.rds-md {
+  border-radius: var(--rds-md);
+}
+.rds-sm {
+  border-radius: var(--rds-sm);
 }
 
-label {
-  display: block;
-  margin-bottom: 0.25rem;
+/*Border Radius*/
+.brd-lg {
+  border: var(--brd-lg);
+}
+.brd-md {
+  border: var(--brd-md);
+}
+.brd-sm {
+  border: var(--brd-sm);
 }
 
-input,
-textarea {
-  display: block;
-  border: 1px solid #ccc;
-  width: 100%;
-  padding: 0.8rem;
-  border-radius: var(--radius);
-  background: #eee;
-  transition: 0.2s;
-}
-
-input:focus,
-textarea:focus {
-  outline: none;
-  border-color: var(--color);
-  background: white;
-  box-shadow: 0 0 0 3px var(--color-light);
-}
-
-button {
+/*Cursor Style*/
+.pointer {
   cursor: pointer;
-  border: none;
-  border-radius: var(--radius);
-  transition: 0.1s;
-  background: var(--color);
-  color: white;
-  padding: 0.8rem 1.6rem;
+}
+.cursor-def {
+  cursor: default;
 }
 
-button:hover,
-button:focus {
-  background: var(--color);
-  box-shadow: 0 0 0 3px var(--color-light), 0 0 0 4px var(--color);
-  outline: none;
+/*Width fitted*/
+.w-fit {
+  width: fit-content;
+}
+.h-fit {
+  height: fit-content;
+}
+.w-full {
+  width: 100%;
+}
+.h-full {
+  height: 100%;
 }
 
-button:active {
-  box-shadow: 0 0 0 3px var(--color), 0 0 0 4px var(--color);
+/*Padding Vertical*/
+.py-4 {
+  padding-top: var(--p-4);
+  padding-bottom: var(--p-4);
+}
+.py-8 {
+  padding-top: var(--p-8);
+  padding-bottom: var(--p-8);
+}
+.py-12 {
+  padding-top: var(--p-12);
+  padding-bottom: var(--p-12);
+}
+.py-16 {
+  padding-top: var(--p-16);
+  padding-bottom: var(--p-16);
+}
+.py-24 {
+  padding-top: var(--p-24);
+  padding-bottom: var(--p-24);
+}
+.py-32 {
+  padding-top: var(--p-32);
+  padding-bottom: var(--p-32);
+}
+.py-64 {
+  padding-top: var(--p-64);
+  padding-bottom: var(--p-64);
+}
+.py-80 {
+  padding-top: var(--p-80);
+  padding-bottom: var(--p-80);
 }
 
-button:disabled {
-  opacity: 0.5;
-  cursor: wait;
+/*Padding Horizontal*/
+.px-4 {
+  padding-left: var(--p-4);
+  padding-right: var(--p-4);
+}
+.px-8 {
+  padding-left: var(--p-8);
+  padding-right: var(--p-8);
+}
+.px-12 {
+  padding-left: var(--p-12);
+  padding-right: var(--p-12);
+}
+.px-16 {
+  padding-left: var(--p-16);
+  padding-right: var(--p-16);
+}
+.px-24 {
+  padding-left: var(--p-24);
+  padding-right: var(--p-24);
+}
+.px-32 {
+  padding-left: var(--p-32);
+  padding-right: var(--p-32);
+}
+.px-64 {
+  padding-left: var(--p-64);
+  padding-right: var(--p-64);
+}
+.px-80 {
+  padding-left: var(--p-80);
+  padding-right: var(--p-80);
 }
 
-hr {
-  border: 2px solid black;
-  margin: 2rem auto;
+/*Display Flex*/
+.flex {
+  display: var(--flex);
+}
+.flex-1 {
+  flex: 1;
 }
 
-fieldset {
-  border: 3px solid #0180ba3d;
-  border-radius: 1.5rem;
+.flex-column {
+  flex-direction: var(--flex-column);
+}
+.flex-row {
+  flex-direction: var(--flex-row);
+}
+
+.gap-4 {
+  gap: var(--gap-4);
+}
+.gap-8 {
+  gap: var(--gap-8);
+}
+.gap-12 {
+  gap: var(--gap-12);
+}
+.gap-16 {
+  gap: var(--gap-16);
+}
+.gap-24 {
+  gap: var(--gap-24);
+}
+.gap-32 {
+  gap: var(--gap-32);
+}
+
+.align-center {
+  align-items: var(--center);
+}
+.align-start {
+  align-items: var(--a-start);
+}
+.align-end {
+  align-items: var(--a-end);
+}
+.align-stretch {
+  align-items: var(--a-stretch);
+}
+
+.justify-center {
+  justify-content: var(--center);
+}
+.justify-start {
+  justify-content: var(--j-start);
+}
+.justify-end {
+  justify-content: var(--j-end);
+}
+.justify-between {
+  justify-content: var(--j-between);
+}
+.justify-around {
+  justify-content: var(--j-around);
+}
+.justify-evenly {
+  justify-content: var(--j-evenly);
 }
