@@ -7,7 +7,9 @@ const Loading = ({ loadingState, stepIcon, children }) => {
     if (!loadingState) return;
 
     let intervalAnimation = setInterval(() => {
-      setAnimationStep(prev => (prev.length >= 5 ? stepIcon : prev + stepIcon));
+      setAnimationStep(prev =>
+        prev.length >= 10 ? stepIcon : prev + stepIcon
+      );
     }, 152);
 
     return () => clearInterval(intervalAnimation);
