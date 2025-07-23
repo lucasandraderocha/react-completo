@@ -7,11 +7,13 @@
 import SignUpResponseExerciseLesson from "./components/SignUpResponseExerciseLesson";
 import ExerciseStorage from "./contexts/ExerciseStorage";
 import FormContainerExercise from "./components/FormContainerExercise";
+import Loading from "./components/Loading";
 
 const Exercise = () => {
   return (
     <ExerciseStorage>
       <SignUpResponseExerciseLesson />
+      <Loading />
       <FormContainerExercise />
     </ExerciseStorage>
   );

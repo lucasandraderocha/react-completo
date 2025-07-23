@@ -13,10 +13,6 @@
   list-style-type: none;
 }
 
-.disabled:disabled {
-  opacity: var(--disabled);
-}
-
 /*Typography size*/
 .typo-xlg {
   font-size: var(--font-xlg);

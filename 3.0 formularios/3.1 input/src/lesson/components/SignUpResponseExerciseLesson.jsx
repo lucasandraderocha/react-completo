@@ -1,12 +1,14 @@
 import { useContext } from "react";
 import ExerciseContext from "../contexts/ExerciseContext";
 import Button from "./Button";
+import useSubmitHandler from "../hooks/useSubmitHandler";
 
 const SignUpResponseExerciseLesson = () => {
   const { status, setStatus } = useContext(ExerciseContext);
+  const { error, loading } = useSubmitHandler();
   return (
     <>
-      {status && (
+      {!loading && !error && status && (
         <div
           className="gap-8"
           style={{

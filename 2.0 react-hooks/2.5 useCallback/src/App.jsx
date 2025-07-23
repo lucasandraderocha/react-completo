@@ -10,7 +10,7 @@ function App() {
   };
   return (
     <>
-      <div>
+      <fieldset>
         <h1>useCallback</h1>
         <div>
           <button onClick={handleShowClick}>
@@ -20,7 +20,7 @@ function App() {
         <br />
         {!lesson && <Test />}
         {lesson && <Lesson />}
-      </div>
+      </fieldset>
     </>
   );
 }
