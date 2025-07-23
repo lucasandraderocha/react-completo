@@ -1,25 +1,35 @@
 import { useEffect, useState } from "react";
-import useSubmitHandler from "../hooks/useSubmitHandler";
 
-const Loading = () => {
-  const { loading } = useSubmitHandler();
-  const [dots, setDots] = useState("∷");
+const Loading = ({ loadingState, stepIcon, children }) => {
+  const [animationStep, setAnimationStep] = useState(stepIcon);
 
   useEffect(() => {
-    if (!loading) return;
+    if (!loadingState) return;
+
     let intervalAnimation = setInterval(() => {
-      setDots(prev => (prev.length >= 3 ? "∷" : prev + "∷"));
-    }, 1000);
+      setAnimationStep(prev => (prev.length >= 5 ? stepIcon : prev + stepIcon));
+    }, 152);
+
     return () => clearInterval(intervalAnimation);
-  }, [loading]);
+  }, [loadingState, stepIcon]);
+
   return (
     <>
-      {loading && (
-        <div className="flex flex-column align-center">
-          <h1>Carregando</h1>
-          <p>{dots}</p>
+      <div
+        style={{
+          display: "grid",
+          gridColumn: "2/ 4",
+          alignSelf: "center",
+          justifySelf: "stretch",
+        }}
+      >
+        <div className="flex w-full align-center justify-center">
+          {children}
         </div>
-      )}
+        <p className="flex w-full align-center justify-center">
+          {animationStep}
+        </p>
+      </div>
     </>
   );
 };
