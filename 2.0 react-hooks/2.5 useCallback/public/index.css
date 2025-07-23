@@ -1,3 +1,6 @@
+@import url(https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=B612+Mono:wght@100;200;300;400;500;600;700&display=swap);
+
 *,
 *::after,
 *::before {
@@ -5,9 +8,10 @@
 }
 
 html {
-  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
-    Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  --font-title: Georgia, "Times New Roman", Times, serif;
+  --font: "IBM Plex Mono", monospace, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  --font-title: "B612 Mono", monospace, Georgia, "Times New Roman", Times, serif;
   --font-size: 1.2rem;
   --color: #19f;
   --color-light: #adf;
@@ -102,4 +106,9 @@ button:disabled {
 hr {
   border: 2px solid black;
   margin: 2rem auto;
+}
+
+fieldset {
+  border: 3px solid #0180ba3d;
+  border-radius: 1.5rem;
 }
