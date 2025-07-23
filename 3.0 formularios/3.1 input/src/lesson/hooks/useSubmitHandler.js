@@ -1,33 +1,26 @@
-import { useCallback, useContext, useState } from "react";
+import { useCallback, useContext } from "react";
 import ExerciseContext from "../contexts/ExerciseContext";
 
 const useSubmitHandler = () => {
-  const { setStatus } = useContext(ExerciseContext);
-
-  const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(null);
+  const { setStatus, setLoading, loading } = useContext(ExerciseContext);
 
   const handleSubmit = useCallback(
     async (url, options) => {
       let res;
       try {
-        setError(null);
         setLoading(true);
-        console.log("Loading: ", loading);
         res = await fetch(url, options);
       } catch (error) {
         console.log(error);
-        setError(error);
       } finally {
+        setStatus(res.status);
         setLoading(false);
       }
-
-      return res ? setStatus(res.status) : setStatus(null);
+      return res;
     },
-    [setStatus]
+    [setStatus, setLoading]
   );
-
-  return { error, loading, handleSubmit };
+  return { loading, handleSubmit };
 };
 
 export default useSubmitHandler;

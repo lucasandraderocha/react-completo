@@ -4,6 +4,7 @@ import ExerciseContext from "./ExerciseContext";
 import formField from "../utils/formField";
 
 const ExerciseStorage = ({ children }) => {
+  const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState(null);
   const [form, setForm] = useState(
     formField.reduce((acc, field) => {
@@ -15,7 +16,9 @@ const ExerciseStorage = ({ children }) => {
   );
 
   return (
-    <ExerciseContext.Provider value={{ form, setForm, status, setStatus }}>
+    <ExerciseContext.Provider
+      value={{ loading, setLoading, form, setForm, status, setStatus }}
+    >
       {children}
     </ExerciseContext.Provider>
   );

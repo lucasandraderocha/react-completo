@@ -1,21 +1,25 @@
-// Faça um fetch (POST) para a API abaixo
-// Para a criação ser aceita é necessário enviar dodos de:
-// nome, email, senha, cep, rua, numero, bairro, cidade e estado
+import { useContext } from "react";
 
-// Mostre uma mensagem na tela, caso a resposta da API seja positiva
-
-import SignUpResponseExerciseLesson from "./components/SignUpResponseExerciseLesson";
+import SignUpResponseExerciseLesson from "./components/SignupFeedback";
 import ExerciseStorage from "./contexts/ExerciseStorage";
 import FormContainerExercise from "./components/FormContainerExercise";
 import Loading from "./components/Loading";
 
+import ExerciseContext from "./contexts/ExerciseContext";
+
 const Exercise = () => {
+  const { loading, status } = useContext(ExerciseContext);
+
   return (
-    <ExerciseStorage>
-      <SignUpResponseExerciseLesson />
-      <Loading />
-      <FormContainerExercise />
-    </ExerciseStorage>
+    <>
+      {loading && (
+        <Loading loadingState={loading} stepIcon={"|"}>
+          <h1>Loading</h1>
+        </Loading>
+      )}
+      {status && <SignUpResponseExerciseLesson />}
+      {!loading && !status && <FormContainerExercise />}
+    </>
   );
 };
 

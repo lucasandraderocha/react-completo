@@ -11,9 +11,9 @@ import Input from "./Input";
 import Button from "./Button";
 
 const FormContainerExercise = () => {
-  const { form: input, onChange } = useChange();
+  const { form, onChange } = useChange();
   const { status } = useContext(ExerciseContext);
-  const { error, loading, handleSubmit } = useSubmitHandler();
+  const { loading, handleSubmit } = useSubmitHandler();
 
   const handleOnSubmit = e => {
     e.preventDefault();
@@ -23,7 +23,7 @@ const FormContainerExercise = () => {
         "Content-Type": "application/json",
       },
 
-      body: JSON.stringify(input),
+      body: JSON.stringify(form),
     });
   };
 
@@ -39,7 +39,7 @@ const FormContainerExercise = () => {
                   id={id}
                   type={type}
                   placeholder={placeholder}
-                  value={input[id]}
+                  value={form[id]}
                   onChange={onChange}
                   required
                 />
