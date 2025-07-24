@@ -36,16 +36,16 @@ const formField = [
     placeholder: "Bairro Bora Bill",
   },
   {
-    id: "cidade",
-    label: "Cidade ↴",
-    type: "text",
-    placeholder: "Cidade Bora Bill",
-  },
-  {
     id: "estado",
     label: "Estado ↴",
     type: "text",
     placeholder: "Estado Bora Bill",
+  },
+  {
+    id: "cidade",
+    label: "Cidade ↴",
+    type: "text",
+    placeholder: "Cidade Bora Bill",
   },
 ];
 

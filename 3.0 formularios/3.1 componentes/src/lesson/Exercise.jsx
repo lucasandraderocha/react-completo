@@ -13,7 +13,7 @@ const Exercise = () => {
   return (
     <>
       {loading && (
-        <Loading loadingState={loading} stepIcon={"|"}>
+        <Loading loadingState={loading} stepIcon={"||"}>
           <h1>Loading</h1>
         </Loading>
       )}
