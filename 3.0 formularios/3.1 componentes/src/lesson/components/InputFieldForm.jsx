@@ -1,23 +1,19 @@
-import useChange from "../hooks/useChange";
-
 import Label from "./Label";
 import Input from "./Input";
 
-const InputFieldForm = ({ inputFields }) => {
-  const { form, onChange } = useChange();
-  console.log(inputFields);
+const InputFieldForm = ({ fields, values, onFieldChange }) => {
   return (
     <>
-      {inputFields.map(({ id, label, type, placeholder }, index) => (
-        <div key={index}>
+      {fields.map(({ id, label, type, placeholder }) => (
+        <div key={id}>
           <Label>
             {label}
             <Input
               id={id}
               type={type}
               placeholder={placeholder}
-              value={form[id] || ""}
-              onChange={onChange}
+              value={values[id] || ""}
+              onChange={onFieldChange}
               required
             />
           </Label>
