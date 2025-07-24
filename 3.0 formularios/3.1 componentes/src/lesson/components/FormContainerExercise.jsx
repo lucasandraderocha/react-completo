@@ -1,18 +1,18 @@
 import { useContext } from "react";
 
+import formField from "../utils/formField";
 import ExerciseContext from "../contexts/ExerciseContext";
 
 import useChange from "../hooks/useChange";
 import useSubmitHandler from "../hooks/useSubmitHandler";
 
-import SelectFieldForm from "./SelectFieldForm";
 import InputFieldForm from "./InputFieldForm";
 import Button from "./Button";
 import Form from "./form";
 
 const FormContainerExercise = () => {
-  const { form } = useChange();
-  const { status, inputField } = useContext(ExerciseContext);
+  const { form, onChange } = useChange();
+  const { status } = useContext(ExerciseContext);
   const { loading, handleSubmit } = useSubmitHandler();
 
   const handleOnSubmit = e => {
@@ -31,8 +31,11 @@ const FormContainerExercise = () => {
     <>
       {!loading && !status && (
         <Form onSubmit={handleOnSubmit}>
-          <InputFieldForm inputFields={inputField} />
-          <SelectFieldForm />
+          <InputFieldForm
+            fields={formField}
+            values={form}
+            onFieldChange={onChange}
+          />
           <Button>Enviar</Button>
         </Form>
       )}
