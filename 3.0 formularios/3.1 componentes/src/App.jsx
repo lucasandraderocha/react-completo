@@ -9,7 +9,7 @@ function App() {
     <>
       <main className="py-16 px-16 typo-main flex flex-column gap-8">
         <section className="brd-sm rds-sm py-8 px-8 flex flex-column gap-8 align-center">
-          <h1>Input</h1>
+          <h1>Componentes</h1>
           <button
             onClick={() => setLesson(!lesson)}
             className="px-32 py-16 rds-md typo-main color-neutral-deep pointer w-fit"
