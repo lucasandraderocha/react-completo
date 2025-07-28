@@ -103,7 +103,7 @@ const Form = () => {
             </div>
           )}
           <div className="flex flex-column gap-8 py-8 px-8 brd-sm rds-sm">
-            <h1>Horti-frutti</h1>
+            {/* <h1>Horti-frutti</h1>
             <Checkbox
               options={functionalLanguages}
               value={language}
@@ -142,7 +142,7 @@ const Form = () => {
               type="password"
               id="hi"
               className="py-8 px-8 brd-sm rds-sm color-neutral-soft typo-main"
-            />
+            /> */}
           </div>
           <Submit className="py-12 px-16 rds-sm typo-main color-primary pointer">
             Enviar

@@ -1,5 +1,5 @@
 import Container from "../lesson/components/container/Container";
-import FormExercise from "./exercise/QuizExercise";
+import Quiz from "./exercise/Quiz";
 
 const Test = () => {
   return (
@@ -8,7 +8,7 @@ const Test = () => {
         <h1 className="typo-main typo-xlg">Test ⇢ Exercise Quiz</h1>
       </Container>
       <Container className="w-full">
-        <FormExercise />
+        <Quiz />
       </Container>
     </>
   );

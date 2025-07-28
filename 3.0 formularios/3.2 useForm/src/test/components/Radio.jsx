@@ -1,25 +1,25 @@
-import Label from "./Label";
-
-const Radio = ({ options, value, setValue, ...props }) => {
-  console.log(options);
+const Radio = ({ pergunta, options, id, value, onChange, active }) => {
+  if (!active) return null;
   return (
     <>
-      {options.map(option => (
-        <Label
-          key={option}
-          className="flex flex-row gap-8 py-4 px-4 brd-sm rds-sm"
-        >
-          <input
-            style={{ accentColor: "var(--primary)" }}
-            type="radio"
-            value={option}
-            checked={value === option}
-            onChange={({ target }) => setValue(target.value)}
-            {...props}
-          />
-          <p>{option}</p>
-        </Label>
-      ))}
+      <fieldset
+        key={pergunta}
+        className="flex flex-column gap-8 py-16 px-16 brd-sm rds-sm"
+      >
+        <legend className="typo-lg ">{pergunta}</legend>
+        {options.map(option => (
+          <label key={option} className="flex gap-8">
+            <input
+              type="radio"
+              id={id}
+              value={option}
+              checked={value === option}
+              onChange={onChange}
+            />
+            <p>{option}</p>
+          </label>
+        ))}
+      </fieldset>
     </>
   );
 };
