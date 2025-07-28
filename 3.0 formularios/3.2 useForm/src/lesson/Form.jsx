@@ -102,6 +102,48 @@ const Form = () => {
               <p>{cep.error}</p>
             </div>
           )}
+          <div className="flex flex-column gap-8 py-8 px-8 brd-sm rds-sm">
+            <h1>Horti-frutti</h1>
+            <Checkbox
+              options={functionalLanguages}
+              value={language}
+              setValue={setLanguage}
+            />
+          </div>
+          <div className="flex flex-column gap-8 py-8 px-8 brd-sm rds-sm">
+            <h1>Horti-frutti</h1>
+            <Radio options={foodOptions} value={food} setValue={setFood} />
+          </div>
+          <div className="flex flex-column gap-8 py-8 px-8 brd-sm rds-sm">
+            <Select
+              className="py-8 px-8 brd-sm rds-sm color-neutral-deep typo-main"
+              value={product}
+              onChange={({ target }) => setProduct(target.value)}
+            >
+              <Option value="" disabled>
+                Selecione
+              </Option>
+              {["Smartphone", "Telefone", "Notebook", "PC", "iPhone"].map(
+                produto => (
+                  <Option key={produto} id={produto} value={produto}>
+                    {produto}
+                  </Option>
+                )
+              )}
+            </Select>
+            <Input
+              label="Email↴"
+              type="email"
+              id="hi"
+              className="py-8 px-8 brd-sm rds-sm color-neutral-soft typo-main"
+            />
+            <Input
+              label="Senha↴"
+              type="password"
+              id="hi"
+              className="py-8 px-8 brd-sm rds-sm color-neutral-soft typo-main"
+            />
+          </div>
           <Submit className="py-12 px-16 rds-sm typo-main color-primary pointer">
             Enviar
           </Submit>

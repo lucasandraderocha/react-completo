@@ -20,15 +20,19 @@
 /*Typography size*/
 .typo-xlg {
   font-size: var(--font-xlg);
+  font-weight: 400;
 }
 .typo-lg {
   font-size: var(--font-lg);
+  font-weight: 600;
 }
 .typo-md {
   font-size: var(--font-md);
+  font-weight: 600;
 }
 .typo-sm {
   font-size: var(--font-sm);
+  font-weight: 500;
 }
 
 /*Typography family*/
@@ -37,6 +41,12 @@
 }
 .typo-body {
   font-family: var(--font-body);
+  font-weight: 500;
+}
+
+/* Other Typography Styles */
+.text-center {
+  text-align: center;
 }
 
 /*Main Colors*/
@@ -48,6 +58,7 @@
 .color-primary:hover {
   background: var(--primary-hover);
   transform: scale(0.98);
+  opacity: 0.8;
 }
 
 /*Other Colors*/
