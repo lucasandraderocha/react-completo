@@ -1,0 +1,27 @@
+.container {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.content {
+  display: flex;
+  transition: transform 152ms ease;
+}
+
+.item {
+  padding: 15rem;
+  margin: 0 10%;
+  text-align: center;
+  flex-shrink: 0;
+  width: 80%;
+  background: var(--neutral-deep);
+  color: var(--neutral-halo);
+  border-radius: 0.5rem;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+}
