@@ -1,0 +1,20 @@
+@keyframes animeLeft {
+  to {
+    opacity: var(--opacity-100);
+    transform: var(--dist-initial);
+  }
+}
+
+@keyframes animeTop {
+  to {
+    opacity: var(--opacity-100);
+    transform: var(--dist-initial);
+  }
+}
+
+@keyframes animeBottom {
+  to {
+    opacity: var(--opacity-100);
+    transform: var(--dist-initial);
+  }
+}
