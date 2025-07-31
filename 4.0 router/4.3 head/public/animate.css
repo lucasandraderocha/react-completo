@@ -24,3 +24,15 @@
   transform: var(--distY-b-60);
   animation: animeTop 352ms var(--cb-gentle) forwards;
 }
+
+.loading {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 4px solid #ccc;
+  border-left-color: transparent;
+  animation-duration: 640ms;
+  animation-timing-function: var(--cd-gentle);
+  animation-iteration-count: infinite;
+  animation-name: loading;
+}

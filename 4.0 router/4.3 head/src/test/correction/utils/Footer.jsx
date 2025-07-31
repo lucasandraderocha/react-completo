@@ -7,7 +7,7 @@ const Footer = () => {
     <>
       <footer>
         <Container className={styles.footer}>
-          <h1>Footer</h1>
+          <p>Alguns direitos reservados</p>
         </Container>
       </footer>
     </>

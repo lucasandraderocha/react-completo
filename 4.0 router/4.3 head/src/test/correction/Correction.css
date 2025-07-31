@@ -11,3 +11,12 @@ a {
 h1 {
   font-size: 32px;
 }
+
+.App {
+  display: flex;
+  flex-direction: column;
+
+  max-width: 40rem;
+  margin: 0 auto;
+  height: calc(100vh + 5rem);
+}

@@ -18,3 +18,9 @@
     transform: var(--dist-initial);
   }
 }
+
+@keyframes loading {
+  to {
+    transform: rotate(360deg);
+  }
+}
