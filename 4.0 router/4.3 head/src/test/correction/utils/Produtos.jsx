@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import styles from "./Produtos.module.css";
+import Head from "./Head";
 
 const Produtos = () => {
   const [data, setData] = useState(null);
@@ -13,6 +14,7 @@ const Produtos = () => {
   }, []);
   return (
     <>
+      <Head title={"Home"} descrition={"Página home de produtos."} />
       {data && (
         <section on className={`${styles.produtos} animeLeft`}>
           {data.map(product => (
