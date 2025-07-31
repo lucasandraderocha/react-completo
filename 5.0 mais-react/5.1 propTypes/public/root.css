@@ -1,0 +1,363 @@
+@import url(https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;800;900&display=swap);
+@import "./root.css";
+@import "./animate.css";
+/*Reset CSS*/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  list-style-type: none;
+}
+
+.disabled:disabled {
+  opacity: var(--disabled);
+}
+
+/*Typography size*/
+.typo-xlg {
+  font-size: var(--font-xlg);
+  font-weight: 400;
+}
+.typo-lg {
+  font-size: var(--font-lg);
+  font-weight: 600;
+}
+.typo-md {
+  font-size: var(--font-md);
+  font-weight: 600;
+}
+.typo-sm {
+  font-size: var(--font-sm);
+  font-weight: 500;
+}
+
+/*Typography family*/
+.typo-main {
+  font-family: var(--font-main);
+}
+.typo-body {
+  font-family: var(--font-body);
+  font-weight: 500;
+}
+
+/* Other Typography Styles */
+.text-center {
+  text-align: center;
+}
+
+/*Main Colors*/
+.color-primary {
+  background: var(--primary);
+  transition: background 152ms cubic-bezier(0.2, 0, 0, 1),
+    transform 152ms cubic-bezier(0.2, 0, 0, 1);
+}
+.color-primary:hover {
+  background: var(--primary-hover);
+  transform: scale(0.98);
+  opacity: 0.8;
+}
+
+/*Other Colors*/
+.color-neutral-halo {
+  background: var(--neutral-halo);
+  color: var(--neutral-deep);
+}
+.color-neutral-soft {
+  background: var(--neutral-soft);
+  color: var(--neutral-deep);
+}
+.color-neutral-tint {
+  background: var(--neutral-tint);
+  color: var(--neutral-halo);
+}
+.color-neutral-dim {
+  background: var(--neutral-dim);
+  color: var(--neutral-halo);
+}
+.color-neutral-dark {
+  background: var(--neutral-dark);
+  color: var(--neutral-halo);
+}
+.color-neutral-deep {
+  background: var(--neutral-deep);
+  color: var(--neutral-halo);
+}
+
+/*Border Radius*/
+.rds-lg {
+  border-radius: var(--rds-lg);
+}
+.rds-md {
+  border-radius: var(--rds-md);
+}
+.rds-sm {
+  border-radius: var(--rds-sm);
+}
+
+/*Border Radius*/
+.brd-lg {
+  border: var(--brd-lg);
+}
+.brd-md {
+  border: var(--brd-md);
+}
+.brd-sm {
+  border: var(--brd-sm);
+}
+
+/*Cursor Style*/
+.pointer {
+  cursor: pointer;
+}
+.cursor-def {
+  cursor: default;
+}
+
+/*Width fitted*/
+.w-fit {
+  width: fit-content;
+}
+.h-fit {
+  height: fit-content;
+}
+.w-full {
+  width: 100%;
+}
+.h-full {
+  height: 100%;
+}
+
+/*Padding Vertical*/
+.py-4 {
+  padding-top: var(--p-4);
+  padding-bottom: var(--p-4);
+}
+.py-8 {
+  padding-top: var(--p-8);
+  padding-bottom: var(--p-8);
+}
+.py-12 {
+  padding-top: var(--p-12);
+  padding-bottom: var(--p-12);
+}
+.py-16 {
+  padding-top: var(--p-16);
+  padding-bottom: var(--p-16);
+}
+.py-24 {
+  padding-top: var(--p-24);
+  padding-bottom: var(--p-24);
+}
+.py-32 {
+  padding-top: var(--p-32);
+  padding-bottom: var(--p-32);
+}
+.py-64 {
+  padding-top: var(--p-64);
+  padding-bottom: var(--p-64);
+}
+.py-80 {
+  padding-top: var(--p-80);
+  padding-bottom: var(--p-80);
+}
+
+/*Padding Horizontal*/
+.px-4 {
+  padding-left: var(--p-4);
+  padding-right: var(--p-4);
+}
+.px-8 {
+  padding-left: var(--p-8);
+  padding-right: var(--p-8);
+}
+.px-12 {
+  padding-left: var(--p-12);
+  padding-right: var(--p-12);
+}
+.px-16 {
+  padding-left: var(--p-16);
+  padding-right: var(--p-16);
+}
+.px-24 {
+  padding-left: var(--p-24);
+  padding-right: var(--p-24);
+}
+.px-32 {
+  padding-left: var(--p-32);
+  padding-right: var(--p-32);
+}
+.px-64 {
+  padding-left: var(--p-64);
+  padding-right: var(--p-64);
+}
+.px-80 {
+  padding-left: var(--p-80);
+  padding-right: var(--p-80);
+}
+
+/*Display Flex*/
+.flex {
+  display: var(--flex);
+}
+.flex-1 {
+  flex: 1;
+}
+
+.flex-column {
+  flex-direction: var(--flex-column);
+}
+.flex-row {
+  flex-direction: var(--flex-row);
+}
+
+.gap-4 {
+  gap: var(--gap-4);
+}
+.gap-8 {
+  gap: var(--gap-8);
+}
+.gap-12 {
+  gap: var(--gap-12);
+}
+.gap-16 {
+  gap: var(--gap-16);
+}
+.gap-24 {
+  gap: var(--gap-24);
+}
+.gap-32 {
+  gap: var(--gap-32);
+}
+
+.align-center {
+  align-items: var(--center);
+}
+.align-start {
+  align-items: var(--a-start);
+}
+.align-end {
+  align-items: var(--a-end);
+}
+.align-stretch {
+  align-items: var(--a-stretch);
+}
+
+.justify-center {
+  justify-content: var(--center);
+}
+.justify-start {
+  justify-content: var(--j-start);
+}
+.justify-end {
+  justify-content: var(--j-end);
+}
+.justify-between {
+  justify-content: var(--j-between);
+}
+.justify-around {
+  justify-content: var(--j-around);
+}
+.justify-evenly {
+  justify-content: var(--j-evenly);
+}
+
+/* Extra Styles */
+.link {
+  text-decoration: none;
+}
+:root {
+  --font-main: "IBM Plex Mono", monospace;
+  --font-body: "Inter", sans-serif;
+
+  --font-xlg: 2rem;
+  --font-lg: 1.5rem;
+  --font-md: 1.125rem;
+  --font-sm: 0.875rem;
+
+  --primary: #fca311;
+  --primary-hover: #ffc300;
+  --neutral-halo: #ffffff;
+  --neutral-soft: #e5e5e5;
+  --neutral-tint: #9fa4ad;
+  --neutral-dim: #5a6275;
+  --neutral-dark: #14213d;
+  --neutral-deep: #000000;
+
+  --rds-lg: 2.125rem;
+  --rds-md: 1.5rem;
+  --rds-sm: 0.5rem;
+
+  --brd-lg: 4px solid var(--neutral-soft);
+  --brd-md: 2px solid var(--neutral-soft);
+  --brd-sm: 1px solid var(--neutral-soft);
+
+  --flex: flex;
+  --flex-column: column;
+  --flex-row: row;
+
+  --j-start: start;
+  --a-end: end;
+  --a-stretch: stretch;
+
+  --center: center;
+
+  --j-end: end;
+  --j-start: start;
+  --j-between: space-between;
+  --j-around: space-around;
+  --j-evenly: space-evenly;
+
+  --gap-4: 0.25rem;
+  --gap-8: 0.5rem;
+  --gap-12: 0.75rem;
+  --gap-16: 1rem;
+  --gap-24: 1.5rem;
+  --gap-32: 2rem;
+
+  --p-4: 0.25rem;
+  --p-8: 0.5rem;
+  --p-12: 0.75rem;
+  --p-16: 1rem;
+  --p-24: 1.5rem;
+  --p-32: 2rem;
+  --p-64: 4rem;
+  --p-80: 5rem;
+
+  --disabled: 0.8;
+
+  --dist-initial: initial;
+  /* Translate from left[X] or top[Y]  */
+  --distX-l-20: translateX(-20px);
+  --distX-l-40: translateX(-40px);
+  --distX-l-60: translateX(-60px);
+  --distY-t-40: translateY(-40px);
+  --distY-t-20: translateY(-20px);
+  --distY-t-60: translateY(-60px);
+
+  /* Translate from right[X] or bottom[Y]  */
+  --distX-r-20: translateX(20px);
+  --distX-r-40: translateX(40px);
+  --distX-r-60: translateX(60px);
+  --distY-b-40: translateY(40px);
+  --distY-b-20: translateY(20px);
+  --distY-b-60: translateY(60px);
+
+  --opacity-0: 0;
+  --opacity-25: 0.25;
+  --opacity-50: 0.5;
+  --opacity-75: 0.75;
+  --opacity-100: 1;
+
+  --scale-0: scale(0);
+  --scale-85: scale(0.85);
+  --scale-90: scale(0.9);
+  --scale-95: scale(0.95);
+  --scale-98: scale(0.98);
+
+  --cb-gentle: cubic-bezier(0.4, 0, 0.2, 1);
+  --cb-smooth: cubic-bezier(0.2, 0, 0, 1);
+}
