@@ -1,0 +1,44 @@
+.header {
+  margin-bottom: 2rem;
+}
+
+.header ul {
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+  gap: 16px;
+}
+
+.header ul li {
+  margin-right: 16px;
+}
+
+.link {
+  display: block;
+  text-decoration: none;
+  font-size: 24px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: black;
+  background: #eee;
+  padding: 8px 16px;
+  border-radius: 16px;
+  transition: background 64ms var(--cb-gentle) normal;
+}
+
+.link:hover {
+  background: #ddd;
+}
+
+.active {
+  display: block;
+  text-decoration: none;
+  font-size: 24px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #777;
+  background: #ddd;
+  padding: 8px 16px;
+  border-radius: 16px;
+  transition: background 64ms var(--cb-gentle) normal;
+}

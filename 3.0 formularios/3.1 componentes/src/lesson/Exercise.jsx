@@ -1,7 +1,6 @@
 import { useContext } from "react";
 
 import SignUpResponseExerciseLesson from "./components/SignupFeedback";
-import ExerciseStorage from "./contexts/ExerciseStorage";
 import FormContainerExercise from "./components/FormContainerExercise";
 import Loading from "./components/Loading";
 
