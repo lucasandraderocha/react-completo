@@ -3,7 +3,7 @@ import Lesson from "./lesson/Lesson";
 import Test from "./test/Test";
 
 function App() {
-  const [lesson, setLesson] = useState(false);
+  const [lesson, setLesson] = useState(true);
 
   return (
     <>
