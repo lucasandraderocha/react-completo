@@ -3,13 +3,13 @@ import Lesson from "./lesson/Lesson";
 import Test from "./test/Test";
 
 function App() {
-  const [lesson, setLesson] = useState(true);
+  const [lesson, setLesson] = useState(false);
 
   return (
     <>
       <main className="typo-main flex w-full h-full flex-column gap-8 py-16 px-16">
         <section className="brd-sm rds-sm py-8 px-8 flex flex-column gap-8 align-center">
-          <h1>Lazy e Suspense</h1>
+          <h1>useReducer</h1>
         </section>
         <section className="brd-sm rds-sm py-8 px-8 flex flex-column gap-8 align-center">
           <button
