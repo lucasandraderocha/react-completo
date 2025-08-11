@@ -1,0 +1,38 @@
+@import "./root.css";
+@import "./keyframes.css";
+
+.animeLeft {
+  opacity: var(--opacity-0);
+  transform: var(--distX-l-20);
+  animation: animeLeft 352ms var(--cb-gentle) forwards;
+}
+
+.animeRight {
+  opacity: var(--opacity-0);
+  transform: var(--distX-r-60);
+  animation: animeTop 352ms var(--cb-gentle) forwards;
+}
+
+.animeTop {
+  opacity: var(--opacity-0);
+  transform: var(--distY-t-60);
+  animation: animeTop 352ms var(--cb-gentle) forwards;
+}
+
+.animeBottom {
+  opacity: var(--opacity-0);
+  transform: var(--distY-b-60);
+  animation: animeTop 352ms var(--cb-gentle) forwards;
+}
+
+.loading {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 4px solid #ccc;
+  border-left-color: transparent;
+  animation-duration: 640ms;
+  animation-timing-function: var(--cd-gentle);
+  animation-iteration-count: infinite;
+  animation-name: loading;
+}
