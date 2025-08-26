@@ -1,28 +1,31 @@
-import { useState } from "react";
-import Lesson from "./lesson/Lesson";
-import Test from "./test/Test";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import UserStorage from "./UserStorage";
+
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Home from "./components/Home";
+import User from "./User/User";
+import Login from "./components/login/Login";
+import NotFound from "./NotFound";
+
+import "./App.css";
 
 function App() {
-  const [lesson, setLesson] = useState(true);
-
   return (
     <>
-      <main className="typo-main flex w-full h-full flex-column gap-8 py-16 px-16">
-        <section className="brd-sm rds-sm py-8 px-8 flex flex-column gap-8 align-center">
-          <h1>PropTypes</h1>
-        </section>
-        <section className="brd-sm rds-sm py-8 px-8 flex flex-column gap-8 align-center">
-          <button
-            onClick={() => setLesson(!lesson)}
-            className="px-32 py-16 rds-md typo-main color-neutral-deep pointer w-fit"
-          >
-            {lesson ? "Mostrar Teste" : "Mostrar Aula"}
-          </button>
-        </section>
-        <section className="brd-sm rds-sm py-8 px-8 flex flex-column gap-8 align-center">
-          {lesson ? <Lesson /> : <Test />}
-        </section>
-      </main>
+      <BrowserRouter>
+        <UserStorage>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="login/*" element={<Login />} />
+            <Route path="account/*" element={<User />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+          <Footer />
+        </UserStorage>
+      </BrowserRouter>
     </>
   );
 }
