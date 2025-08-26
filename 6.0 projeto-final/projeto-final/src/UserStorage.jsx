@@ -69,9 +69,9 @@ const UserStorage = ({ children }) => {
         } catch (error) {
           const e = new Error(`Error: ${error}`);
           userLogout();
-          setError(e);
+          setError(e.message);
         } finally {
-          setLoading(null);
+          setLoading(false);
         }
       } else {
         setLogin(false);

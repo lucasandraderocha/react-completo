@@ -14,7 +14,7 @@ import styles from "./Login.module.css";
 const Login = () => {
   const { login } = useContext(UserContext);
 
-  if (login) return <Navigate to="/conta" />;
+  if (login) return <Navigate to="/account" />;
 
   return (
     <>
