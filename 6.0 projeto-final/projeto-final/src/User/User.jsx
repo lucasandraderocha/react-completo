@@ -7,7 +7,7 @@ import UserStats from "./UserStats";
 const User = () => {
   return (
     <>
-      <section>
+      <section className="container">
         <UserHeader />
         <Routes>
           <Route path="/" element={<Feed />} />
