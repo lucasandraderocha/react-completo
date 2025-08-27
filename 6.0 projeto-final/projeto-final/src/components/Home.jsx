@@ -1,9 +1,11 @@
-import React from "react";
-
+import Feed from "./feed/Feed";
 const Home = () => {
   return (
     <>
-      <h1>Home</h1>
+      <section className="container">
+        <h1 className="title">Feed</h1>
+        <Feed />
+      </section>
     </>
   );
 };
