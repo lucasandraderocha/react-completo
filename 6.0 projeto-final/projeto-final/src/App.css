@@ -80,3 +80,36 @@ input {
     transform: initial;
   }
 }
+
+/* Chrome, Safari, Edge */
+
+::-webkit-scrollbar {
+  width: 0.5rem; /* Largura da barra */
+}
+::-webkit-scrollbar-track {
+  background: #777; /* Cor do trilho da barra */
+}
+::-webkit-scrollbar-thumb {
+  background: #eee6; /* Cor da parte móvel da barra */
+  border-radius: 0.125rem; /* Raio da borda da parte móvel da barra */
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ccc5; /* Cor da parte móvel da barra no hover */
+}
+
+/* Firefox */
+@-moz-document url-prefix() {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #eee2 #fff2;
+  }
+}
+
+.hoverLetter {
+  letter-spacing: inherit;
+  transition: letter-spacing 152ms cubic-bezier(0.2, 0, 0, 1);
+}
+
+.hoverLetter:hover {
+  letter-spacing: 1px;
+}

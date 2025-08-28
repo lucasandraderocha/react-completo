@@ -28,7 +28,7 @@
 }
 
 .viewItem {
-  background: radial-gradient(#0007 25%, #0002 100%);
+  background: #0007;
   filter: blur(10px);
   color: #eee;
   font-size: 2rem;
@@ -40,6 +40,7 @@
   grid-area: 1/1;
   opacity: 0;
   transition: all 0.232s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition-delay: 96ms;
 }
 
 .viewItem::before {

@@ -45,7 +45,7 @@ export const GET_PHOTOS = ({ page, total, user }) => {
     },
   };
 };
-export const GET_PHOTO = ({ id }) => {
+export const GET_PHOTO = id => {
   return {
     url: `${API_URL}/api/photo/${id}`,
     options: {
@@ -77,6 +77,19 @@ export const POST_PHOTO = (formData, token) => {
         Authorization: `Bearer ${token}`,
       },
       body: formData,
+    },
+  };
+};
+export const POST_COMMENT = (token, id, body) => {
+  return {
+    url: `${API_URL}/api/comment/${id}`,
+    options: {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify(body),
     },
   };
 };
