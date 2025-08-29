@@ -28,11 +28,13 @@
 }
 
 .details {
-  background: #fffa;
+  background: #fffb;
   border: 1px solid #fffd;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
   border-radius: 1rem;
   padding: 0.5rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
 }
 
 .img {

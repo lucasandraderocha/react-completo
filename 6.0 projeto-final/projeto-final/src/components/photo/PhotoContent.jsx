@@ -1,20 +1,32 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
-import styles from "./PhotoContent.module.css";
+
+import UserContext from "../../UserContext";
+
 import PhotoComments from "./PhotoComments";
+import PhotoDelete from "./PhotoDelete";
+
+import styles from "./PhotoContent.module.css";
+import Image from "../helper/Image";
 
 const PhotoContent = ({ data }) => {
+  const user = useContext(UserContext);
   const { photo, comments } = data;
 
   return (
     <section className={styles.photo}>
       <div className={styles.img}>
-        <img src={photo.src} alt={photo.title} />
+        <Image src={photo.src} alt={photo.title} />
       </div>
       <div className={styles.info}>
         <div className={styles.details}>
           <section className={styles.author}>
             <p>
-              <Link to={`/perfil/${photo.author}`}>@{photo.author}</Link>
+              {user.data && user.data.username === photo.author ? (
+                <PhotoDelete id={photo.id} />
+              ) : (
+                <Link to={`/perfil/${photo.author}`}>@{photo.author}</Link>
+              )}
             </p>
             <span className={styles.views}>{photo.acessos}</span>
           </section>

@@ -17,7 +17,6 @@ const PhotoCommentsForm = ({ id, setComments, onCommentRef }) => {
     const token = window.localStorage.getItem("token");
     const { url, options } = POST_COMMENT(token, id, { comment });
     let { res, json } = await request(url, options);
-    console.log(json);
     if (res.ok) {
       setComment("");
       setComments(comments => [...comments, json]);

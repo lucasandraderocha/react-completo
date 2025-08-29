@@ -1,14 +1,13 @@
 .comment {
   grid-row: 2/4;
   word-break: break-word;
-  background: #f002;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 3fr 1fr;
   gap: 1rem;
-  background: #fffa;
+  background: #fffb;
   border: 1px solid #fffd;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
   border-radius: 1rem;
   padding: 0.5rem;
 }
@@ -72,13 +71,17 @@
 .singleComment {
   display: flex;
   flex-direction: column;
-  padding: 0.25rem 1rem;
-  border-left: 1px solid #8885;
+  padding: 0.5rem;
+  background: #fff5;
+  border: 1px solid #fffb;
+  backdrop-filter: blur(40px);
+  border-radius: 0.5rem;
 }
 
 .singleComment h1 {
   font-family: var(--type-second);
   font-size: 1rem;
+  /* text-transform: capitalize; */
 }
 
 .singleComment p {

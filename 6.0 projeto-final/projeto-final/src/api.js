@@ -80,6 +80,19 @@ export const POST_PHOTO = (formData, token) => {
     },
   };
 };
+
+export const DELETE_PHOTO = (id, token) => {
+  return {
+    url: `${API_URL}/api/photo/${id}`,
+    options: {
+      method: "DELETE",
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    },
+  };
+};
+
 export const POST_COMMENT = (token, id, body) => {
   return {
     url: `${API_URL}/api/comment/${id}`,

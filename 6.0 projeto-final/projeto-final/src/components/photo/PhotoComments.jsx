@@ -29,7 +29,7 @@ const PhotoComments = ({ comments, id }) => {
             {lateComments.length > 10 ? (
               <li style={{ height: "1.5rem" }}></li>
             ) : (
-              <li style={{ height: "0rem" }}></li>
+              <li style={{ display: "none" }}></li>
             )}
             {lateComments.map(
               ({
@@ -37,17 +37,26 @@ const PhotoComments = ({ comments, id }) => {
                 comment_author,
                 comment_content,
                 comment_date,
-              }) => (
-                <>
+              }) => {
+                const date = new Date(comment_date);
+                const formattedDate = new Intl.DateTimeFormat("pt-BR", {
+                  weekday: "long",
+                  hour: "2-digit",
+                  minute: "2-digit",
+                  day: "2-digit",
+                  month: "2-digit",
+                  year: "2-digit",
+                }).format(date);
+                return (
                   <li key={comment_ID} className={styles.singleComment}>
                     <div>
-                      <h1>{comment_author}</h1>
-                      <span className={styles.postedAt}>{date}</span>
+                      <h1>@{comment_author}</h1>
+                      <span className={styles.postedAt}>{formattedDate}</span>
                     </div>
                     <p>{comment_content}</p>
                   </li>
-                </>
-              )
+                );
+              }
             )}
           </ul>
         </div>

@@ -1,3 +1,4 @@
+import Image from "../helper/Image";
 import styles from "./FeedPhotoItems.module.css";
 
 const FeedPhotoItems = ({ setModalPhoto, photo }) => {
@@ -8,7 +9,7 @@ const FeedPhotoItems = ({ setModalPhoto, photo }) => {
   return (
     <>
       <li className={`${styles.photoItem}  animeLeft`} onClick={handleClick}>
-        <img src={photo.src} alt={photo.alt} />
+        <Image src={photo.src} alt={photo.alt} />
         <span className={styles.viewItem}>{photo.acessos}</span>
       </li>
     </>
