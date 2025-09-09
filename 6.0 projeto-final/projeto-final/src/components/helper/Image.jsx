@@ -1,11 +1,18 @@
+import { useState } from "react";
 import styles from "./Image.module.css";
 
 const Image = ({ ...props }) => {
+  const [skeleton, setSkeleton] = useState(true);
+  const handleLoad = ({ target }) => {
+    setSkeleton(false);
+    target.style.opacity = 1;
+  };
+
   return (
     <>
       <section className={styles.wrapper}>
-        <div className={styles.skeleton}></div>
-        <img className={styles.image} {...props} />
+        {skeleton && <div className={styles.skeleton}></div>}
+        <img onLoad={handleLoad} className={styles.image} {...props} />
       </section>
     </>
   );

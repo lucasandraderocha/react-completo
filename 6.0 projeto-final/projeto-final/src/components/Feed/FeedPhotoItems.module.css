@@ -23,7 +23,7 @@
   cursor: pointer;
 }
 
-.photoItem img {
+.photoItem > section {
   grid-area: 1/1;
 }
 

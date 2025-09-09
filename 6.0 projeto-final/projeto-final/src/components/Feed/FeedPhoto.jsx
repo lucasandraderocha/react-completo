@@ -4,7 +4,7 @@ import useFetch from "../../hooks/useFetch";
 import { GET_PHOTOS } from "../../api";
 
 import FeedPhotoItems from "./FeedPhotoItems";
-import Loading from "../primitives/Loading";
+import Loading from "../helper/Loading";
 
 import styles from "./FeedPhoto.module.css";
 

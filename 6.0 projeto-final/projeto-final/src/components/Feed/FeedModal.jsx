@@ -4,7 +4,7 @@ import useFetch from "../../hooks/useFetch";
 
 import { GET_PHOTO } from "../../api";
 import Error from "../helper/Error";
-import Loading from "../primitives/Loading";
+import Loading from "../helper/Loading";
 import PhotoContent from "../photo/PhotoContent";
 import styles from "./FeedModal.module.css";
 
