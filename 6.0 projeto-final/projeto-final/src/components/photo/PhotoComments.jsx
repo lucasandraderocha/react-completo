@@ -20,16 +20,16 @@ const PhotoComments = ({ comments, id }) => {
       <section className={styles.comment}>
         <div
           className={
-            lateComments.length < 10
-              ? styles.displayingLessComments
-              : styles.displayingMoreComments
+            lateComments.length < 6
+              ? `${styles.displayingLessComments} ${styles.scrollbarComment}`
+              : `${styles.displayingMoreComments} ${styles.scrollbarComment}`
           }
         >
           <ul ref={commentSectionRef}>
             {lateComments.length > 10 ? (
               <li style={{ height: "1.5rem" }}></li>
             ) : (
-              <li style={{ display: "none" }}></li>
+              ""
             )}
             {lateComments.map(
               ({

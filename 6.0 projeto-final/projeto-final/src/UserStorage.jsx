@@ -9,7 +9,10 @@ const UserStorage = ({ children }) => {
   const [login, setLogin] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
+
   const navigate = useNavigate();
+
+  const [modalPhoto, setModalPhoto] = useState(null);
 
   const getUser = async token => {
     const { url, options } = GET_USER(token);
@@ -81,7 +84,16 @@ const UserStorage = ({ children }) => {
   }, [userLogout]);
   return (
     <UserContext.Provider
-      value={{ data, error, loading, login, userLogin, userLogout }}
+      value={{
+        data,
+        error,
+        loading,
+        login,
+        userLogin,
+        userLogout,
+        modalPhoto,
+        setModalPhoto,
+      }}
     >
       {children}
     </UserContext.Provider>

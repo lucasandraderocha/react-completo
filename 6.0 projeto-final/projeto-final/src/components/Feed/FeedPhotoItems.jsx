@@ -1,7 +1,11 @@
+import { useContext } from "react";
 import Image from "../helper/Image";
 import styles from "./FeedPhotoItems.module.css";
+import UserContext from "../../UserContext";
 
-const FeedPhotoItems = ({ setModalPhoto, photo }) => {
+const FeedPhotoItems = ({ photo }) => {
+  const { setModalPhoto } = useContext(UserContext);
+
   const handleClick = () => {
     setModalPhoto(photo);
   };

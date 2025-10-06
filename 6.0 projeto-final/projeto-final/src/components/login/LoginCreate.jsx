@@ -8,6 +8,9 @@ import Label from "../form/Label";
 import useFetch from "../../hooks/useFetch";
 import Error from "../helper/Error";
 
+import styles from "./LoginForm.module.css";
+import { Link } from "react-router-dom";
+
 const LoginCreate = () => {
   const username = useForm();
   const email = useForm("email");
@@ -21,9 +24,8 @@ const LoginCreate = () => {
       email: email.value,
       password: password.value,
     });
-    const { res } = await request(url, options);
 
-    console.log(res);
+    await request(url, options);
   };
 
   return (
@@ -69,6 +71,13 @@ const LoginCreate = () => {
             )}
             <Error error={error} />
           </form>
+          <div className={styles.createAccount}>
+            <h2 className={styles.subtitle}>
+              Já <i>Possui</i> uma conta?
+            </h2>
+            <p>Entre agora mesmo</p>
+            <Link to="/login">Entrar</Link>
+          </div>
         </div>
       </section>
     </>

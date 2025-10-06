@@ -8,17 +8,17 @@ import Loading from "../helper/Loading";
 
 import styles from "./FeedPhoto.module.css";
 
-const FeedPhoto = ({ setModalPhoto }) => {
+const FeedPhoto = ({ user, page }) => {
   const { data, error, loading, request } = useFetch();
 
   useEffect(() => {
     const fetchPhotos = async () => {
-      const { url, options } = GET_PHOTOS({ page: 1, total: 6, user: 0 });
+      const { url, options } = GET_PHOTOS({ page, total: 3, user });
 
       await request(url, options);
     };
     fetchPhotos();
-  }, [request]);
+  }, [request, user, page]);
   if (error) return <Error error={error} />;
   if (loading) return <Loading />;
   if (data)
@@ -26,11 +26,7 @@ const FeedPhoto = ({ setModalPhoto }) => {
       <>
         <ul className={`${styles.feed}`}>
           {data.map(photo => (
-            <FeedPhotoItems
-              key={photo.id}
-              photo={photo}
-              setModalPhoto={setModalPhoto}
-            />
+            <FeedPhotoItems key={photo.id} photo={photo} />
           ))}
         </ul>
       </>

@@ -50,11 +50,32 @@
     overflow-y: auto;
     grid-template-columns: minmax(20rem, 40rem);
   }
-  .img {
-    grid-row: 1;
+  /* Chrome, Safari, Edge */
+  .photo::-webkit-scrollbar {
+    width: 4px; /* Largura da barra */
   }
+  .photo::-webkit-scrollbar-track {
+    background: none; /* Cor do trilho da barra */
+  }
+  .photo:hover ul::-webkit-scrollbar-thumb {
+    background: #3336; /* Cor da parte móvel da barra */
+    border-radius: 0.125rem; /* Raio da borda da parte móvel da barra */
+  }
+
+  .photo::-webkit-scrollbar-thumb {
+    background: #3330; /* Cor da parte móvel da barra */
+    border-radius: 0.125rem; /* Raio da borda da parte móvel da barra */
+    transition: background 652ms cubic-bezier(0.2, 0, 0, 1);
+  }
+
+  .photo::-webkit-scrollbar-thumb:hover {
+    background: #3333; /* Cor da parte móvel da barra no hover */
+  }
+
   .info {
-    grid-row: auto;
+    grid-row: 4/4;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
   }
 }
 

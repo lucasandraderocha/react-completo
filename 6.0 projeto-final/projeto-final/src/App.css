@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
 body {
-  padding-top: 4rem;
   color: #333;
   --type-first: "Inter Tight", Arial, sans-serif;
   --type-second: "Instrument Serif", Georgia;
@@ -101,7 +100,7 @@ input {
 @-moz-document url-prefix() {
   * {
     scrollbar-width: thin;
-    scrollbar-color: #eee2 #fff2;
+    scrollbar-color: #aaa #fff0 !important;
   }
 }
 

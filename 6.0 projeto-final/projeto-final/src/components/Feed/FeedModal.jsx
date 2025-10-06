@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 
 import useFetch from "../../hooks/useFetch";
 
@@ -7,9 +7,11 @@ import Error from "../helper/Error";
 import Loading from "../helper/Loading";
 import PhotoContent from "../photo/PhotoContent";
 import styles from "./FeedModal.module.css";
+import UserContext from "../../UserContext";
 
-const FeedModal = ({ photo, setModalPhoto }) => {
+const FeedModal = ({ photo }) => {
   const { data, error, loading, request } = useFetch();
+  const { setModalPhoto } = useContext(UserContext);
 
   useEffect(() => {
     const { id } = photo;
