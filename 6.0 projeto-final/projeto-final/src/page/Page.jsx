@@ -11,6 +11,7 @@ import styles from "./Page.module.css";
 
 import { useContext } from "react";
 import { Route, Routes } from "react-router-dom";
+import Photo from "../components/photo/Photo";
 
 const Page = () => {
   const { modalPhoto } = useContext(UserContext);
@@ -28,6 +29,7 @@ const Page = () => {
             </ProtectedRoute>
           }
         />
+        <Route path="picture/:id" element={<Photo />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

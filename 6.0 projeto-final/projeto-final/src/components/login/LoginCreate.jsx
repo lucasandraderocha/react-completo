@@ -17,15 +17,21 @@ const LoginCreate = () => {
   const password = useForm();
 
   const { loading, error, request } = useFetch();
+
   const handleSubmit = async e => {
     e.preventDefault();
-    const { url, options } = POST_USER({
-      username: username.value,
-      email: email.value,
-      password: password.value,
-    });
+    try {
+      const { url, options } = POST_USER({
+        username: username.value,
+        email: email.value,
+        password: password.value,
+      });
 
-    await request(url, options);
+      const { res } = await request(url, options);
+      console.log(res);
+    } catch (error) {
+      return { error };
+    }
   };
 
   return (
