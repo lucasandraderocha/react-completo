@@ -1,13 +1,13 @@
 import { useContext, useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 
-import useMedia from "../hooks/useMedia";
-import UserContext from "../UserContext";
+import useMedia from "../../hooks/useMedia";
+import UserContext from "../../UserContext";
 
-import MyGallery from "../Assets/feed.svg?react";
-import PostPhoto from "../Assets/adicionar.svg?react";
-import MyStats from "../Assets/estatisticas.svg?react";
-import Logout from "../Assets/sair.svg?react";
+import MyGallery from "../../Assets/feed.svg?react";
+import PostPhoto from "../../Assets/adicionar.svg?react";
+import MyStats from "../../Assets/estatisticas.svg?react";
+import Logout from "../../Assets/sair.svg?react";
 
 import styles from "./UserHeaderNav.module.css";
 const UserHeaderNav = () => {
